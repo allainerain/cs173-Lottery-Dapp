@@ -89,7 +89,7 @@ const App = () => {
         <div className="mt-2">
           {players.map((player, index) => (
             <div key={index}>
-              <b>Ticket {index + 1}:</b> {player}
+              <b>Purchase {index + 1}:</b> {player}
             </div>
           ))}
         </div>
