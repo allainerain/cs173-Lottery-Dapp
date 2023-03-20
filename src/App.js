@@ -61,17 +61,20 @@ const App = () => {
   return (
     <div className="h-100">
       <Navbar />
-      <div className="d-flex flex-column justify-content-center align-items-center h-100">
+      <div 
+      className="d-flex flex-column justify-content-center align-items-center h-100"
+      >
         {/* Ticket remaining display */}
         <div className="py-1">Tickets remaining: {tickets}</div>
         {/* Action Buttons */}
-        {tickets > 0 ? (
-          <form>
 
-            <div className="py-1">Number of Tickets To Buy</div>         
-            <input type="number" pattern="[0-9]*" value={ticketValue} onChange={handleInputChange}  />
-            <br />
-            <button onClick={onBuyTicket} className="btn btn-primary btn-lg">
+        {tickets > 0 ? (
+          <form class="form-inline">
+            <div class="form-group mb-2">
+              <input type="number" class="form-control" pattern="[0-9]*" placeholder="Number of tickets to purchase" value={ticketValue} onChange={handleInputChange}  />
+            </div>
+            
+            <button onClick={onBuyTicket} className="btn btn-primary btn-lg ">
               {/* TODO 7.b - Call onBuyTicket on click */}
               {/* TODO 7.c - Show "loading..." when buying operation is pending */}
               { loading ? "Loading..." : "Buy Ticket"}
